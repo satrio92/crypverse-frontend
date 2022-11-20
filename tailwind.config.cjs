@@ -7,7 +7,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["Poppins"]
+        poppins: ["Poppins"],
+      }, 
+      colors: {
+        main: "#050915",
+        clifford: "#da373d",
+        bluefish: "#5CE1E6",
       }
     },
   },
