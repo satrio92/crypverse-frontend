@@ -78,14 +78,17 @@ export default {
 				}, 3000)
 			},
 			setUser(data) {
+				console.log(data)
 				if (data['message']) {
 					if (Object.keys(data['message']) == 0) {
 						this.message = "User tidak ditemukan"
+					} else {
+						
+						this.message = data.message
 					}
-					this.message = data.message
 				} else {
-					this.popupSuccess = true
 					sessionStorage.setItem("user", data._id)
+					this.popupSuccess = true
 					setTimeout(this.clearPopup, 3000)
 				}
 			},

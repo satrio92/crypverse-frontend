@@ -10,16 +10,24 @@
             </div>
             <div class="flex gap-2 items-center">
                 <div class="bg-blue-gradient rounded-lg h-12 flex items-center px-4">
-                    <p class="text-main font-semibold">Kukuh Satrio</p>
+                    <p class="text-main font-semibold">{{ user.nama }}</p>
                 </div>
-                <i class="ti ti-chevron-down text-2xl text-white cursor-pointer"></i>
+                <i class="ti text-2xl text-white cursor-pointer" :class="[dropdown ? 'ti-chevron-up' : 'ti-chevron-down']" @click="dropdown = !dropdown"></i>
             </div>
         </nav>
+        <div v-if="dropdown" class="absolute top-[92px] right-10 text-main bg-slate-200 px-8 py-4 rounded-md font-semibold flex flex-col gap-3 items-center">
+            <p>Detail Profile</p>
+            <p>Setting</p>
+            <p class="cursor-pointer" @click="logOut()">Logout</p>
+        </div>
         <div class="w-full h-full flex items-center justify-center">
-            <div class="flex flex-col items-center gap-10">
+            <div class="bg-rounded-gradient w-[600px] h-[600px] rounded-full absolute z-0">
+
+            </div>
+            <div class="flex flex-col items-center gap-10 z-20">
                 <div class="flex flex-col gap-6 items-center">
                     <h2 class="text-5xl font-semibold text-white">Welcome</h2>
-                    <h1 class="title text-gradient text-7xl font-bold">Kukuh Satrio</h1>
+                    <h1 class="title text-gradient text-7xl font-bold">{{ user.nama }}</h1>
                 </div>
                 <div class="bg-blue-gradient rounded-lg h-12 flex items-center px-7">
                     <p class="text-main font-semibold">Explore Now</p>
@@ -40,7 +48,8 @@ export default {
     data() {
         return {
             id: sessionStorage.getItem('user'),
-            user: {}
+            user: {},
+            dropdown: false
         }
     },
     methods: {
@@ -61,6 +70,10 @@ export default {
             })
             text.start()
             text.reveal(3000)
+        },
+        logOut() {
+            sessionStorage.clear()
+            this.$router.push({ name : 'Login' })
         }
     },
     mounted() {

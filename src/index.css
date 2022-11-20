@@ -71,6 +71,16 @@
         );
     }
 
+    .bg-rounded-gradient {
+        background: radial-gradient(
+            50% 50% at 50% 50%, 
+            rgba(125, 204, 214, 0.1875) 0%, 
+            rgba(255, 255, 255, 0) 100%, 
+            rgba(125, 204, 214, 0) 
+            100%
+        );
+    }
+
     .bg-discount-gradient {
         background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
     }
