@@ -85,6 +85,7 @@ export default {
 					this.message = data.message
 				} else {
 					this.popupSuccess = true
+					sessionStorage.setItem("user", data._id)
 					setTimeout(this.clearPopup, 3000)
 				}
 			},

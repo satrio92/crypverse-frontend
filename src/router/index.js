@@ -26,4 +26,12 @@ const router = createRouter({
 	],
 });
 
+const isAuthenticated = sessionStorage.getItem("user")
+
+router.beforeEach((to, from, next) => {
+	if (to.name == 'Home' && !isAuthenticated) next({ name: 'Login' })
+	else if (to.name == null) next({ name: 'Home' })
+  else next()
+})
+
 export default router;
