@@ -23,7 +23,7 @@
         <div class="w-full h-full flex items-center justify-center">
             <div class="bg-rounded-gradient w-[550px] h-[550px] rounded-full absolute z-0"></div>
             <div class="rounded-full px-2 py-2 absolute top-32 left-72">
-                <img src="../assets/Shield Done.svg" alt="shield icon">
+                <img src="../assets/Shield-done.svg" alt="shield icon">
             </div>
             <div class="rounded-full w-6 h-6 absolute top-60 left-[420px] bg-blue-gradient"></div>
             <div class="rounded-full px-2 py-2 absolute top-64 right-72">
