@@ -14,32 +14,32 @@
 				<div class="flex flex-col gap-3 text-[#0B1E37]">
 					<div class="flex flex-col gap-2">
 						<label for="nama">Nama Lengkap</label>
-						<input type="text" name="nama" id="nama" placeholder="John Eden" class="border border-[#828282] p-3 w-96" v-model="user.nama">
+						<input type="text" name="nama" id="nama" placeholder="John Eden" class="border border-[#828282] p-3 w-[350px] lg:w-96" v-model="user.nama">
 					</div>
 					<div class="flex flex-col gap-2">
 						<label for="email">Email</label>
-						<input type="email" name="email" id="email" placeholder="johneden@gmail.com" class="border border-[#828282] p-3 w-96" v-model="user.email">
+						<input type="email" name="email" id="email" placeholder="johneden@gmail.com" class="border border-[#828282] p-3 w-[350px] lg:w-96" v-model="user.email">
 					</div>
 					<div class="flex flex-col gap-2">
 						<label for="password">Password</label>
-						<div class="border border-[#828282] px-3 py-[10px] w-96 flex">
+						<div class="border border-[#828282] px-3 py-[10px] w-[350px] lg:w-96 flex">
 							<input :type="[passShow ? 'text' : 'password']" name="password" id="password" placeholder="secret123" class="w-full outline-none active:outline-dashed9" v-model="user.password">
 							<i class="ti text-2xl cursor-pointer text-slate-500" :class="[passShow ? 'ti-eye-off' : 'ti-eye']" @click="passShow = !passShow"></i>
 						</div>
 					</div>
 					<div class="flex flex-col gap-2 mb-2">
 						<label for="repassword">Re-Password</label>
-						<div class="border border-[#828282] px-3 py-[10px] w-96 flex">
+						<div class="border border-[#828282] px-3 py-[10px] w-[350px] lg:w-96 flex">
 							<input :type="[repassShow ? 'text' : 'password']" name="repassword" id="repassword" placeholder="secret123" class="w-full outline-none" v-model="repass">
 							<i class="ti text-2xl cursor-pointer text-slate-500" :class="[repassShow ? 'ti-eye-off' : 'ti-eye']" @click="repassShow = !repassShow"></i>
 						</div>
 					</div>
-					<button class="bg-[#BCF2C0] hover:bg-[#a2e1a5] w-96 h-12 flex items-center justify-center font-semibold mb-2" @click="signup()">Sign Up</button>
+					<button class="bg-[#BCF2C0] hover:bg-[#a2e1a5] w-[350px] lg:w-96 h-12 flex items-center justify-center font-semibold mb-2" @click="signup()">Sign Up</button>
 					<p class="text-center text-slate-400 text-sm">already have account ? <router-link to="/login" class="font-semibold text-[#0B1E37]">Login</router-link></p>
 				</div>
 			</div>
 		</div>
-		<div class="w-full h-screen flex items-center overflow-hidden">
+		<div class="w-full h-screen hidden lg:flex items-center overflow-hidden">
 			<img src="../assets/illustration.png" alt="">
 		</div>
 		<div class="absolute top-8 right-8 bg-orange-300 px-6 py-3 font-medium flex items-center gap-2" v-if="message">

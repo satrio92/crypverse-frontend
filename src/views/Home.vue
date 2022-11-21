@@ -4,13 +4,13 @@
             <!-- logo -->
             <div class="flex gap-2">
                 <div class="flex gap-2 items-center mb-2">
-					<img src="../assets/logo-white.svg" alt="logo" class="w-14 h-14">
-					<h4 class="text-[24px] font-bold text-white">Crypverse</h4>
+					<img src="../assets/logo-white.svg" alt="logo" class="w-8 lg:w-14 h-8 lg:h-14">
+					<h4 class="text-[18px] font-semibold text-white">Crypverse</h4>
 				</div>
             </div>
             <div class="flex gap-2 items-center">
-                <div class="bg-blue-gradient rounded-lg h-12 flex items-center px-4">
-                    <p class="text-main font-semibold">{{ user.nama }}</p>
+                <div class="bg-blue-gradient rounded-lg h-9 lg:h-12 flex items-center px-4">
+                    <p class="text-xs lg:text-base text-main font-semibold">{{ user.nama }}</p>
                 </div>
                 <i class="ti text-2xl text-white cursor-pointer" :class="[dropdown ? 'ti-chevron-up' : 'ti-chevron-down']" @click="dropdown = !dropdown"></i>
             </div>
@@ -22,24 +22,24 @@
         </div>
         <div class="w-full h-full flex items-center justify-center">
             <div class="bg-rounded-gradient w-[550px] h-[550px] rounded-full absolute z-0"></div>
-            <div class="rounded-full px-2 py-2 absolute top-32 left-72">
+            <div class="rounded-full px-2 py-2 absolute top-64 lg:top-32 left-72">
                 <img src="../assets/Shield-done.svg" alt="shield icon">
             </div>
-            <div class="rounded-full w-6 h-6 absolute top-60 left-[420px] bg-blue-gradient"></div>
-            <div class="rounded-full px-2 py-2 absolute top-64 right-72">
-                <img src="../assets/Send.svg" alt="shield icon">
+            <div class="rounded-full w-6 h-6 absolute top-[310px] lg:top-60 left-[190px] lg:left-[420px] bg-blue-gradient"></div>
+            <div class="rounded-full px-2 py-2 absolute top-56 lg:top-64 right-72">
+                <img src="../assets/Send.svg" alt="send icon">
             </div>
-            <div class="rounded-full px-2 py-2 absolute bottom-52 left-80">
-                <img src="../assets/Star.svg" alt="shield icon">
+            <div class="rounded-full px-2 py-2 absolute bottom-56 lg:bottom-52 left-80">
+                <img src="../assets/Star.svg" alt="star icon">
             </div>
-            <div class="rounded-full px-2 py-2 absolute bottom-36 right-80">
-                <img src="../assets/Star.svg" alt="shield icon">
+            <div class="rounded-full px-2 py-2 absolute bottom-40 lg:bottom-36 right-80">
+                <img src="../assets/Star.svg" alt="star icon">
             </div>
             <div class="rounded-full w-6 h-6 absolute top-48 right-[420px] bg-blue-gradient"></div>
             <div class="flex flex-col items-center gap-10 z-20">
                 <div class="flex flex-col gap-6 items-center">
-                    <h2 class="text-5xl font-semibold text-white">Welcome</h2>
-                    <h1 class="title text-gradient text-7xl font-bold">{{ user.nama }}</h1>
+                    <h2 class="text-4xl lg:text-5xl font-semibold text-white">Welcome</h2>
+                    <h1 class="title text-gradient text-5xl lg:text-7xl font-bold">{{ user.nama }}</h1>
                 </div>
                 <div class="bg-blue-gradient rounded-lg h-12 flex items-center px-7">
                     <p class="text-main font-semibold">Explore Now</p>
