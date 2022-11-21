@@ -69,7 +69,7 @@ export default {
 					this.message = "Password tidak boleh kosong"
 				} else {
 					this.message = ""
-					axios.post('http://localhost:3000/me', this.user)
+					axios.post('https://api-crypverse.vercel.app/me', this.user)
 					.then(res => this.setUser(res.data))
 					.catch(err => console.log(err))
 				}

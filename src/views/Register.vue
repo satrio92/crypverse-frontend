@@ -96,7 +96,7 @@ export default {
 					this.message = "Password yang diinputkan harus sama"
 				} else {
 					this.message = ""
-					axios.post('http://localhost:3000/user', this.user)
+					axios.post('https://api-crypverse.vercel.app/user', this.user)
 					.then(() => this.handlePopup())
 					.catch(err => (console.log(err)))
 				}
